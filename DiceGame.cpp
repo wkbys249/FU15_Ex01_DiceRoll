@@ -18,16 +18,30 @@ int diceRolling(){
 }
 
 int main(){
+  //Greeting
   string name;
   cout << "What is your name?" << endl;
   cout << ">";
   cin >> name;
   cout << "Hello, " << name << "!" << endl;
+
+  //Rolling dice
   cout << "Rolling dice..." << endl;
   int dice1 = diceRolling();
   int dice2 = diceRolling();
   cout << "Die 1: " << dice1 << endl;
   cout << "Die 2: " << dice2 << endl;
   cout << "Total value: " << dice1 + dice2 << endl;
+
+  //Won/lost
+  int winningScore = 7;
+  string text;
+  if(dice1+dice2 < winningScore){
+    text = "lost!";
+  }
+  else{
+    text = "won!";
+  }
+  cout << name << " " << text << endl;
   return 0;
 }
