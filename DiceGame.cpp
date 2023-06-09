@@ -18,6 +18,11 @@ int diceRolling(){
 }
 
 int main(){
+  string name;
+  cout << "What is your name?" << endl;
+  cout << ">";
+  cin >> name;
+  cout << "Hello, " << name << "!" << endl;
   cout << "Rolling dice..." << endl;
   int dice1 = diceRolling();
   int dice2 = diceRolling();
